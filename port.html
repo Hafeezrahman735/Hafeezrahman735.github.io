@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background: rgb(25,25,112);
+  color: white;
+  z-index: 1;
+}
+
+a{
+  display:block;
+  text-decoration: none;
+  font-family: 'Kaushan Script', cursive;
+}
+.nav-link {
+  display: block;
+  padding: 1.5rem;
+  text-transform: uppercase;
+	letter-spacing: .05rem;
+	font-size: 1.25rem;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+	background-color: rgb(42,82,190);
+  transform: scale(1.2);
+
+}
+nav li {
+	list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  margin: auto;
+}
+ #intro-img{
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(62deg, #bdc3c7 50%, #181719 50%);
+  color: white;
+  
+}
+.stars {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+h1{
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  text-align: center;
+  margin: 1rem;
+}
+
+h2{
+  font-size: 40px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem;
+}
+#img-div {
+  display:flex;
+  width: 30%;
+  justify-content: flex-start;
+}
+
+#img-me{
+  width: 80%;
+  height: auto;
+}
+
+#intro{
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  text-align: center;
+}
+#intro-words{
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#projects{
+  padding: 3rem;
+  background: #36454f;
+}
+#projects h2{
+  color: white;
+}
+#section-header {
+  max-width: 640px;
+  color: white;
+  margin: 3rem auto;
+  border-bottom: 0.2rem solid black;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.project-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+  padding: .5rem;
+  color: white;
+}
+
+.project-tile {
+  background: #303841;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  height: 100%;
+}
+
+.code {
+  color: #303841;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-tile:hover{
+  animation: MenuBtnHover .5s;
+  color: #FFF;
+  /*background: #303841;*/
+  background: #778899;
+  border: none;
+  box-shadow: 0px 10px 10px 1px rgba(0,0,0,0.1)
+}
+
+.img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    
+    border: 1px solid gray;
+}
+
+.img-wrapper img {
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    
+    vertical-align: middle;
+}
+
+.img-wrapper img:hover {
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    -ms-transform:scale(1.2); /* IE 9 */
+    -o-transform:scale(1.2); /* Opera */
+    transform:scale(1.2);
+}
+
+#project-words{
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding: .5rem;
+  font-family: 'Arvo', serif;
+}
+
+#skills{
+  padding: 3rem;
+  background: #612c2b;
+  color: #cea152;
+}
+
+#skills-words{
+  text-align: center;
+  font-weight: 300;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'Arvo', serif;
+  padding-bottom: 5rem;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.contact-links {
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  color: white;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1.5rem;
+  padding: 2rem;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+#username {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+#contact-me{
+  margin: auto; 
+  font-weight: bold;
+}
+
+#contact-info{
+  font-size: 20px;
+  text-align: center;
+  padding: .5rem;
+}
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: rgb(25,25,112);
+}
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+
+</head>
+
+<body>
+ 
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<nav class="nav" id="navbar">
+  <ul>
+    <li><a class="nav-link" href="#welcome-section">About</a></li>
+    <li><a class="nav-link" href="#projects">Projects</a></li>
+    <li><a class="nav-link" href="#skills">Skills</a></li> 
+    <li><a class="nav-link" href="#contact">Contact</a></li>
+  </ul>
+    </nav>
+
+<section id="welcome-section">
+  <div class='stars'></div>
+  <div id="intro-words">
+     
+    <h1>Hello!<br> My Name is Syed Rahman</h1>
+    <hr>
+    <p id="intro">A look into my Skills and Projects as a Web Developer
+</p>
+    
+  </div>
+  <!--
+  <div id="img-div">
+    <img id="img-me" src="https://drive.google.com/uc?export=view&id=1AzMT3wPVk00l_kCb22dwmSrWOeglmo-0"
+         </div> --> 
+    </section>
+  
+<section id="projects">
+  <h2 id="section-header">These are some of my projects</h2>
+  
+  <div class="projects-grid">
+    <div id="boxs">
+    <a
+      href="king.html"
+      target="_blank"
+      class="project project-tile"
+    >
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tribute Page
+        <span class="code">&#47;&gt;</span>
+      </p>
+      <div class="img-wrapper">
+     <img
+        class="project-image"
+        src="https://drive.google.com/uc?export=view&id=1VjqpUHdWAdRIPUZQFyWOrTfdOYPzBAK8"
+        alt="project"
+      /> 
+      </div>
+      <p id="project-words">This page is made as a tribute to Martain Luther King Jr. It provides a summary of his life. Timeline of importants events throughout his life. some of his famous quotes and his most famous speech "I have a Dream....". It also includes facts and historical events he brought change to. <p>
+      
+    </a>
+    </div>
+    
+    <div id="boxs">
+    <a
+      href="https://codepen.io/hafeezrahman/full/GRvOWap"
+      target="_blank"
+      class="project project-tile"
+    >
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Survey Form
+        <span class="code">&#47;&gt;</span>
+      </p>
+      <div class="img-wrapper">
+     <img
+        class="project-image"
+        src="https://drive.google.com/uc?export=view&id=176b54v783Qld7X8fFrxACKM6ptihGgRs"
+        alt="project"
+      /> 
+      </div>
+       <p id="project-words">This page is made as a alternative free code camp survey form. the survey asks for participant name, email, and personal information that can help imporve the website. A few questions are reqired fields that must have an answer to submit.   <p>
+      
+    </a>
+    </div>
+    
+    <div id="boxs">
+	<a
+      href="product.html"
+      target="_blank"
+      class="project project-tile"
+    > 
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Product Landing page
+        <span class="code">&#47;&gt;</span>
+      </p>
+      <div class="img-wrapper">
+     <img
+        class="project-image"
+        src="https://drive.google.com/uc?export=view&id=1ZkktSM1xgrat_5zBL3zshPE2PszeHOuL"
+        alt="project"
+      /> 
+      </div>
+      <p id="project-words">This page is a product landing page for vechiles. It is a website that displays the product that is being sold. Along with information about what the busiess is about and what it provides to its customers. It has a section where the websites shows its inventory and a way for a customer to contact a representative. In addition, joining a newsletter by sharing your email can assist in special deals and coupons.   <p>
+      
+      
+    </a>
+    </div>
+    
+    <div id="boxs">
+    <a
+      href="https://codepen.io/hafeezrahman/full/vYeBwoe"
+      target="_blank"
+      class="project project-tile"
+    >
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Technical Documentation
+        <span class="code">&#47;&gt;</span>
+      </p>
+      <div class="img-wrapper">
+     <img
+        class="project-image"
+        src="https://drive.google.com/uc?export=view&id=1ZPIjlIv_o6xgv5YyBtQyrI_gGsJbbEPj"
+        alt="project"
+      /> 
+      </div>
+      <p id="project-words">This page is made as a technical documentation page that gives an explantion on how to learn key aspects of python, a programming language. Technical documentation is created for the sole purpose of making it simple for the end-user to understand the work dynamics and architecture of a programming language, specifically python.   <p>
+      
+    </a>
+    </div>
+    
+    
+  </div>
+  
+</section>
+
+<section id="skills">
+  <h2 id="section-header">Skills</h2>
+  <p id="skills-words">Motivated Student with strong interest spent in Web Development and Object-oriented
+programming. Developed a few websites and applications and have been actively coding for 2 years. 
+Hardworking, reliable, and punctual in taking on any task. Excellent communication and planning 
+abilities. Engaging demeanor known for working well 
+in deadline-driven environments. Quickly masters new skills. Seeking to apply my abilities doing techoriented projects.</p>
+</section>
+
+<section id="contact" class="contact-section"> 
+  <h2 id="section-header">Let's Work Together... </h2>
+   <div class="contact-links">
+    <div
+      class="contact-details">
+      <i class="fab fa-instagram"></i>  Instagram: <p id="username">@syedrahman19_<p>
+      </div>
+    <div class="contact-details"><a
+      id="profile-link"
+      href="https://github.com/Hafeezrahman735"
+      target="_blank"
+      class="btn contact-details"
+                                                      ><i class="fab fa-github"></i>GitHub:</a>
+     <p id="username"> Hafeezrahman735<p></div>
+    <div class="contact-details">
+      <i class="fab fa-twitter"></i> Twitter: <p id="username"> @SRahman735<p></div>
+    <div class="contact-details">
+      <i class="fas fa-at"></i> Send a mail: <p id="username"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9af2fbfcffffe0e8fbf2f7fbf4ada9afdafdf7fbf3f6b4f9f5f7">[email&#160;protected]</a><p></div>
+    <div class="contact-details">
+      <i class="fas fa-mobile-alt"></i> Call me <p id="username"> Nah! </p></div>
+  </div>
+  
+</section>
+<footer>
+  <div id="contact-me">
+      <p id="contact-info"> Created by Syed Rahman </p>
+      <p id="contact-info">Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5ddd4d3d0d0cfc7d4ddd8d4db828680f5d2d8d4dcd99bd6dad8">[email&#160;protected]</a></p> 
+      <p id="contact-info">FreeCodeCamp Coding Challenge / Responsive Web Design Projects /Build a Product Landing Page</p>
+  
+  <p id="contact-info">
+    &copy; Created projects for
+    <a href="https://www.freecodecamp.com/" target="_blank"
+      >freeCodeCamp <i class="fab fa-free-code-camp"></i
+    ></a>
+  </p>
+  </div>
+</footer>
+
+  
+
+</body>
+
+</html>
+ 
