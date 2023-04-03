@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #ab7d7d;
+    background-image: url("./drawable/how_to_be_a_landscape_photographer_01.webp");
+    font-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.datedisplay {
+    display: flex;
+    background: #000000d0;
+    width: fit-content;
+    margin: 20px 50px;
+    border-radius: 15px;
+    color: white; 
+    padding: 1em;
+    align-items: center;
+}
+
+.back{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 1rem;    
+}
+
+/* CSS */
+.button-17 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  z-index: 0;
+}
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 1em;
+    border-radius: 30px;
+    width: 80%;
+    margin: 25px auto;
+    text-align: center;
+    
+  }
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+.temp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+    font-size: 30px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.daily5days {
+    background: #000000d0;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin: 25px auto;
+    border-radius: 15px;
+    padding: 1em;
+    color: aliceblue;
+    text-align: center;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script2.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>weather app</title>
+</head>
+<body>
+    <div>
+        <div class="datedisplay">
+            <!---->
+            <div class="back">
+                <button class="button-17" role="button">
+                    <a href="../index.html" class="back">GO Back</a>
+                </button>
+            </div>
+            <div>
+            <h2 id="currentdate">Date</h2>
+            <h2 id="currenttime">Time</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+                    width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                   <!-- <path
+                    d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                -->
+                </svg></button>
+            </div>
+            <h2 class="city"> Weather in Chicago</h2>
+            <div class="temp-icon">
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                <p class="temp">100°F</p>
+                <p class="desc">description</p>
+            </div>
+            <div class="info">
+                <p class="feels">feelslike:</p>
+                <p class="wind">winds</p>
+                <p class="humidity">humidity</p>
+                <p class="rain">chance of rain</p>
+                <p class="visibility">visibility</p>
+                <p class="clouds">clouds</p>
+                <p class="sunrise">sunrise</p>
+                <p class="sunset">sunset</p>
+
+            </div>
+        </div>
+        <div class="daily5days">
+            
+            <div class="daily">
+                <p class="date" id="date1"></p>
+                <p class="temp" id="temp1"></p>
+                <img src="./drawable/clear_day.png" alt="" class="icon1" />
+                <p class="desc" id="desc1"></p>
+                <p class="humidity" id="hum1"></p>
+                <p class="winds" id="wind1"></p>
+            </div>
+            
+            <div class="daily">
+                <p id="date2"></p>
+                <p id="temp2">temp</p>
+                <img src="./drawable/clear_day.png" alt="" class="icon2" />
+                <p id="desc2">description</p>
+                <p id="hum2">humidity</p>
+                <p id="wind2">winds</p>
+            </div>
+            <div class="daily">
+                <p id="date3"></p>
+                <p id="temp3">temp</p>
+                <img src="./drawable/clear_day.png" alt="" class="icon3" />
+                <p id="desc3">description</p>
+                <p id="hum3">humidity</p>
+                <p id="wind3">winds</p>
+            </div>
+            <div class="daily">
+                <p id="date4"></p>
+                <p id="temp4">temp</p>
+                <img src="./drawable/clear_day.png" alt="" class="icon4" />
+                <p id="desc4">description</p>
+                <p id="hum4">humidity</p>
+                <p id="wind4">winds</p>
+            </div>
+            <div class="daily">
+                <p id="date5"></p>
+                <p id="temp5">temp</p>
+                <img src="./drawable/clear_day.png" alt="" class="icon5" />
+                <p id="desc5">description</p>
+                <p id="hum5">humidity</p>
+                <p id="wind5">winds</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
